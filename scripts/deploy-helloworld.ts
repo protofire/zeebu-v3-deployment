@@ -11,6 +11,17 @@ async function main() {
   await hello.deployed();
 
   console.log("HelloWorld deployed to:", hello.address);
+
+  // Automatically verify after deployment
+  try {
+    await hre.run("verify:verify", {
+      address: hello.address,
+      constructorArguments: [],
+    });
+    console.log("Contract verified!");
+  } catch (err) {
+    console.warn("Verification failed:", err.message || err);
+  }
 }
 
 main().catch((error) => {
