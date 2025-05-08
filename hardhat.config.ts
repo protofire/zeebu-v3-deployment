@@ -226,10 +226,10 @@ export default {
         network: "somnia-testnet",
         chainId: 50312,
         urls: {
-          apiURL: "https://explorer.somnia.network/api", // <-- replace with actual API endpoint if different
-          browserURL: "https://explorer.somnia.network", // <-- replace with actual explorer URL if different
+          apiURL: "https://shannon-explorer.somnia.network/api",
+          browserURL: "https://shannon-explorer.somnia.network",
         },
-      },
+      }
     ],
   },
 };

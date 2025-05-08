@@ -1,21 +1,22 @@
-// To deploy: npx hardhat run scripts/deploy-helloworld.ts --network <network>
 import hre from "hardhat";
 import { ethers } from "ethers";
 
 async function main() {
-  const [deployer] = await (hre as any).ethers.getSigners();
+  const [deployer] = await hre.ethers.getSigners();
   console.log("Deploying with account:", deployer.address);
 
-  const HelloWorld = await (hre as any).ethers.getContractFactory("HelloWorld");
+  const HelloWorld = await hre.ethers.getContractFactory("HelloWorld");
   const hello = await HelloWorld.deploy();
-  await hello.deployed();
+  console.log(`Transaction hash: ${hello.deployTransaction.hash}`);
 
-  console.log("HelloWorld deployed to:", hello.address);
+  console.log("Awaiting contract deployment...");
+  const receipt = await hello.deployTransaction.wait(3); // Wait for 3 confirmations
+  console.log("Contract deployed at:", receipt.contractAddress);
 
-  // Automatically verify after deployment
+  // Attempt to verify
   try {
     await hre.run("verify:verify", {
-      address: hello.address,
+      address: receipt.contractAddress,
       constructorArguments: [],
     });
     console.log("Contract verified!");
