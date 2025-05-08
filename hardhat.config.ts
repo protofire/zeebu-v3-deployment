@@ -15,6 +15,7 @@ import {
   eOptimismNetwork,
   ePolygonNetwork,
   eBaseNetwork,
+  eSomniaNetwork,
 } from "./helpers/types";
 import { DEFAULT_NAMED_ACCOUNTS } from "./helpers/constants";
 
@@ -127,6 +128,10 @@ export default {
       eBaseNetwork.baseGoerli,
       84531
     ),
+    [eSomniaNetwork.somniaTestnet]: getCommonNetworkConfig(
+      eSomniaNetwork.somniaTestnet,
+      50312
+    ),
   },
   namedAccounts: {
     ...DEFAULT_NAMED_ACCOUNTS,
@@ -215,6 +220,14 @@ export default {
         urls: {
           apiURL: "https://api.basescan.org/api",
           browserURL: "https://basescan.org/",
+        },
+      },
+      {
+        network: "somnia-testnet",
+        chainId: 50312,
+        urls: {
+          apiURL: "https://explorer.somnia.network/api", // <-- replace with actual API endpoint if different
+          browserURL: "https://explorer.somnia.network", // <-- replace with actual explorer URL if different
         },
       },
     ],

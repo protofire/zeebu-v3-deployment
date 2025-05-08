@@ -12,6 +12,7 @@ import {
   eFantomNetwork,
   eOptimismNetwork,
   eBaseNetwork,
+  eSomniaNetwork, // add this import
 } from "./types";
 
 require("dotenv").config();
@@ -98,6 +99,7 @@ export const NETWORKS_RPC_URL: iParamsPerNetwork<string> = {
   [eBaseNetwork.base]: `https://base-mainnet.g.alchemy.com/v2/${getAlchemyKey(
     eBaseNetwork.base
   )}`,
+  [eSomniaNetwork.somniaTestnet]: `https://dream-rpc.somnia.network`,
 };
 
 export const LIVE_NETWORKS: iParamsPerNetwork<boolean> = {
@@ -109,11 +111,13 @@ export const LIVE_NETWORKS: iParamsPerNetwork<boolean> = {
   [eFantomNetwork.main]: true,
   [eOptimismNetwork.main]: true,
   [eBaseNetwork.base]: true,
+  [eSomniaNetwork.somniaTestnet]: false,
 };
 
 const GAS_PRICE_PER_NET: iParamsPerNetwork<string | number> = {
   [eArbitrumNetwork.goerliNitro]: 100000001,
   [eBaseNetwork.baseGoerli]: 8000000000,
+  [eSomniaNetwork.somniaTestnet]: "auto",
 };
 
 export const buildForkConfig = ():
@@ -167,6 +171,7 @@ const MNEMONICS: iParamsPerNetwork<string> = {
   [eArbitrumNetwork.arbitrumTestnet]: process.env.ARBITRUM_MNEMONIC,
   [ePolygonNetwork.mumbai]: process.env.POLYGON_MUMBAI_MNEMONIC,
   [ePolygonNetwork.polygon]: process.env.POLYGON_MNEMONIC,
+  [eSomniaNetwork.somniaTestnet]: process.env.MNEMONIC,
 };
 
 export const hardhatNetworkSettings = {
