@@ -52,6 +52,8 @@ const func: DeployFunction = async function ({
 
   if (isTestnetMarket(await loadPoolConfig(MARKET_NAME))) {
     treasuryOwner = deployer;
+  } else {
+    treasuryOwner = deployer;
   }
 
   if (treasuryAddress && getAddress(treasuryAddress) !== ZERO_ADDRESS) {
