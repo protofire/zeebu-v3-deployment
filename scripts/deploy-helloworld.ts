@@ -1,6 +1,8 @@
 import hre from "hardhat";
 import { ethers } from "ethers";
 
+// npx hardhat run scripts/deploy-helloworld.ts --network somnia-testnet
+
 async function main() {
   const [deployer] = await hre.ethers.getSigners();
   console.log("Deploying with account:", deployer.address);
