@@ -228,6 +228,7 @@ export default {
         urls: {
           apiURL: "https://shannon-explorer.somnia.network/api",
           browserURL: "https://shannon-explorer.somnia.network",
+          timeout: 1200000, // 20 minutes
         },
       }
     ],
