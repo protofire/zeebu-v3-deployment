@@ -46,6 +46,7 @@ export const WRAPPED_NATIVE_TOKEN_PER_NETWORK: { [network: string]: string } = {
   [eFantomNetwork.main]: "0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83",
   [eHarmonyNetwork.main]: "0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a",
   [ePolygonNetwork.polygon]: "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
+  [eEthereumNetwork.sepolia]: "0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14",
 };
 
 export const ZERO_BYTES_32 =
@@ -142,6 +143,7 @@ export const POOL_ADMIN: Record<string, string> = {
   [eBaseNetwork.base]: "0xA9F30e6ED4098e9439B2ac8aEA2d3fc26BcEbb45",
   [eBaseNetwork.baseGoerli]: "0xA9F30e6ED4098e9439B2ac8aEA2d3fc26BcEbb45",
   [eEthereumNetwork.tenderly]: ETHEREUM_SHORT_EXECUTOR,
+  [eEthereumNetwork.sepolia]: "0x9ab5672BCF516A73c1aB035220646e823C59556A",
 };
 
 export const EMERGENCY_ADMIN: Record<string, string> = {
@@ -152,6 +154,7 @@ export const EMERGENCY_ADMIN: Record<string, string> = {
   [eOptimismNetwork.main]: "0xE50c8C619d05ff98b22Adf991F17602C774F785c",
   [ePolygonNetwork.polygon]: "0x1450F2898D6bA2710C98BE9CAF3041330eD5ae58",
   [eEthereumNetwork.main]: ETHEREUM_SHORT_EXECUTOR,
+  [eEthereumNetwork.sepolia]: "0x9ab5672BCF516A73c1aB035220646e823C59556A",
 };
 
 export const DEFAULT_NAMED_ACCOUNTS = {

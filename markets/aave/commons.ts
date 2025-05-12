@@ -36,15 +36,21 @@ export const CommonsConfig: ICommonConfiguration = {
   WrappedNativeTokenSymbol: "WETH",
   ChainlinkAggregator: {
     [eEthereumNetwork.main]: {
-      AAVE: "0x547a514d5e3769680Ce22B2361c10Ea13619e8a9",
-      DAI: "0xAed0c38402a5d19df6E4c03F4E2DceD6e29c1ee9",
-      LINK: "0x2c1d072e956AFFC0D435Cb7AC38EF18d24d9127c",
+      // AAVE: "0x547a514d5e3769680Ce22B2361c10Ea13619e8a9",
+      // DAI: "0xAed0c38402a5d19df6E4c03F4E2DceD6e29c1ee9",
+      // LINK: "0x2c1d072e956AFFC0D435Cb7AC38EF18d24d9127c",
       USDC: "0x8fFfFfd4AfB6115b954Bd326cbe7B4BA576818f6",
       WBTC: "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
       WETH: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
       USDT: "0x3E7d1eAB13ad0104d2750B8863b489D65364e32D",
       // Note: EUR/USD, not EURS dedicated oracle
-      EURS: "0xb49f677943BC038e9857d61E7d053CaA2C1734C1",
+      // EURS: "0xb49f677943BC038e9857d61E7d053CaA2C1734C1",
+    },
+    [eEthereumNetwork.sepolia]: {
+      USDC: '0x62F1B10933581f3DA9C05Ff2aF329c0563c39fD5',
+      WBTC: '0x5fb1616F78dA7aFC9FF79e0371741a747D2a7F22',
+      WETH: '0x694AA1769357215DE4FAC081bf1f309aDC325306',
+      USDT: '0x62F1B10933581f3DA9C05Ff2aF329c0563c39fD5',
     },
     [eEthereumNetwork.rinkeby]: {
       LINK: ZERO_ADDRESS,
@@ -62,6 +68,7 @@ export const CommonsConfig: ICommonConfiguration = {
     [eArbitrumNetwork.arbitrumTestnet]:
       "0xeC67987831C4278160D8e652d3edb0Fc45B3766d",
     [eEthereumNetwork.rinkeby]: ZERO_ADDRESS,
+    [eEthereumNetwork.sepolia]: ZERO_ADDRESS,
   },
   FallbackOracle: {
     [eEthereumNetwork.kovan]: ZERO_ADDRESS,
@@ -69,6 +76,7 @@ export const CommonsConfig: ICommonConfiguration = {
     [eArbitrumNetwork.arbitrum]: ZERO_ADDRESS,
     [eArbitrumNetwork.arbitrumTestnet]: ZERO_ADDRESS,
     [eEthereumNetwork.rinkeby]: ZERO_ADDRESS,
+    [eEthereumNetwork.sepolia]: ZERO_ADDRESS,
   },
   ReservesConfig: {},
   IncentivesConfig: {
@@ -150,7 +158,8 @@ export const CommonsConfig: ICommonConfiguration = {
       liquidationThreshold: "9750",
       liquidationBonus: "10100",
       label: "Stablecoins",
-      assets: ["USDC", "USDT", "DAI", "EURS"],
+      // assets: ["USDC", "USDT", "DAI", "EURS"],
+      assets: ["USDC", "USDT"],
     },
   },
   L2PoolEnabled: {
@@ -161,6 +170,7 @@ export const CommonsConfig: ICommonConfiguration = {
     [eOptimismNetwork.testnet]: true,
     [eBaseNetwork.base]: true,
     [eBaseNetwork.baseGoerli]: true,
+    [eEthereumNetwork.sepolia]: false,
   },
   ParaswapRegistry: {
     [eEthereumNetwork.main]: "0xa68bEA62Dc4034A689AA0F58A76681433caCa663",
