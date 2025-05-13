@@ -282,6 +282,9 @@ export interface iAssetBase<T> {
   STAKE: T;
   xSUSHI: T;
   AVAX: T;
+  USDOX: T;
+  WSTZBU: T;
+  ZBU: T;
 }
 
 export type iAssetsWithoutETH<T> = Omit<iAssetBase<T>, "ETH">;
