@@ -15,6 +15,9 @@ import {
   strategyWBTC,
   strategyWETH,
   strategyUSDT,
+  strategyUSDOX,
+  strategyWSTZBU,
+  strategyZBU,
   // strategyEURS,
 } from "./reservesConfigs";
 
@@ -33,12 +36,15 @@ export const AaveMarket: IAaveConfiguration = {
   ReservesConfig: {
     // DAI: strategyDAI,
     // LINK: strategyLINK,
+    // AAVE: strategyAAVE,
+    // EURS: strategyEURS,
     USDC: strategyUSDC,
     WBTC: strategyWBTC,
     WETH: strategyWETH,
     USDT: strategyUSDT,
-    // AAVE: strategyAAVE,
-    // EURS: strategyEURS,
+    USDOX: strategyUSDOX,
+    WSTZBU: strategyWSTZBU,
+    ZBU: strategyZBU,
   },
   ReserveAssets: {
     [eEthereumNetwork.main]: {
@@ -56,6 +62,9 @@ export const AaveMarket: IAaveConfiguration = {
       WBTC: '0x4647044B0B264C771510FdB2764587B1fc7B599B',
       WETH: '0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14',
       USDT: '0x2516196DA3849e85a6887B78edcb48C1eeF2eb89',
+      USDOX: '0x8C97603960783e5EbaA727E50c02821C833de5b0',
+      WSTZBU: '0xCB2693c8503F51fA42Cfd5952dc078951389448E',
+      ZBU: '0x6098Bc6CA2fDFDa186847878726AFBad1d01f13D',
     },
     [eEthereumNetwork.rinkeby]: {
       // AAVE: ZERO_ADDRESS,
