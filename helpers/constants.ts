@@ -47,6 +47,7 @@ export const WRAPPED_NATIVE_TOKEN_PER_NETWORK: { [network: string]: string } = {
   [eHarmonyNetwork.main]: "0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a",
   [ePolygonNetwork.polygon]: "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
   [eEthereumNetwork.sepolia]: "0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14",
+  [eEthereumNetwork.baseSepolia]: "0x4200000000000000000000000000000000000006",
 };
 
 export const ZERO_BYTES_32 =
@@ -101,6 +102,7 @@ export const chainlinkAggregatorProxy: Record<string, string> = {
   goerli: "0x60E4B131f0F219c72b0346675283E73888e4AB24",
   [eArbitrumNetwork.goerliNitro]: "0xC09e69E79106861dF5d289dA88349f10e2dc6b5C",
   [eEthereumNetwork.sepolia]: "0x694AA1769357215DE4FAC081bf1f309aDC325306",
+  [eEthereumNetwork.baseSepolia]: "0x4aDC67696bA383F43DD60A9e78F2C97Fbbfc7cb1",
 };
 
 export const chainlinkEthUsdAggregatorProxy: Record<string, string> = {
@@ -124,6 +126,7 @@ export const chainlinkEthUsdAggregatorProxy: Record<string, string> = {
   goerli: "0x60E4B131f0F219c72b0346675283E73888e4AB24",
   [eArbitrumNetwork.goerliNitro]: "0xC09e69E79106861dF5d289dA88349f10e2dc6b5C",
   [eEthereumNetwork.sepolia]: "0x694AA1769357215DE4FAC081bf1f309aDC325306",
+  [eEthereumNetwork.baseSepolia]: "0x4aDC67696bA383F43DD60A9e78F2C97Fbbfc7cb1",
 };
 
 export const ETHEREUM_SHORT_EXECUTOR =
@@ -144,6 +147,7 @@ export const POOL_ADMIN: Record<string, string> = {
   [eBaseNetwork.baseGoerli]: "0xA9F30e6ED4098e9439B2ac8aEA2d3fc26BcEbb45",
   [eEthereumNetwork.tenderly]: ETHEREUM_SHORT_EXECUTOR,
   [eEthereumNetwork.sepolia]: "0x9ab5672BCF516A73c1aB035220646e823C59556A",
+  [eEthereumNetwork.baseSepolia]: "0x9ab5672BCF516A73c1aB035220646e823C59556A",
 };
 
 export const EMERGENCY_ADMIN: Record<string, string> = {
@@ -155,6 +159,7 @@ export const EMERGENCY_ADMIN: Record<string, string> = {
   [ePolygonNetwork.polygon]: "0x1450F2898D6bA2710C98BE9CAF3041330eD5ae58",
   [eEthereumNetwork.main]: ETHEREUM_SHORT_EXECUTOR,
   [eEthereumNetwork.sepolia]: "0x9ab5672BCF516A73c1aB035220646e823C59556A",
+  [eEthereumNetwork.baseSepolia]: "0x9ab5672BCF516A73c1aB035220646e823C59556A",
 };
 
 export const DEFAULT_NAMED_ACCOUNTS = {
