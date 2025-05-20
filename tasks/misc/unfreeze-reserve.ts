@@ -1,6 +1,7 @@
 import { task } from "hardhat/config";
 import { ethers } from "hardhat";
 import dotenv from "dotenv";
+import { getPoolConfiguratorProxy } from "../../helpers/contract-getters";
 dotenv.config();
 
 // Usage:
@@ -16,14 +17,10 @@ task("unfreeze-reserve", "Unfreeze a reserve in the Aave V3 protocol")
     if (!ethers.utils.isAddress(asset)) {
       throw new Error("Invalid asset address provided.");
     }
-    const [signer] = await hre.ethers.getSigners();
-    console.log(`Using signer: ${signer.address}`);
-    const poolAddressesProvider = await ethers.getContractAt("PoolAddressesProvider", POOL_ADDRESSES_PROVIDER_ADDRESS, signer);
-    const poolConfiguratorAddress = await poolAddressesProvider.getPoolConfigurator();
-    if (!ethers.utils.isAddress(poolConfiguratorAddress)) {
-      throw new Error("Invalid PoolConfigurator address fetched from PoolAddressesProvider.");
-    }
-    const poolConfigurator = await ethers.getContractAt("PoolConfigurator", poolConfiguratorAddress, signer);
+    const { poolAdmin } = await hre.getNamedAccounts();
+    const poolConfigurator = (await getPoolConfiguratorProxy()).connect(
+      await hre.ethers.getSigner(poolAdmin)
+    );
     console.log(`Unfreezing reserve for asset: ${asset}`);
     const tx = await poolConfigurator.setReserveFreeze(asset, false);
     await tx.wait();

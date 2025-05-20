@@ -1,6 +1,7 @@
 import { task } from "hardhat/config";
 import { ethers } from "hardhat";
 import dotenv from "dotenv";
+import { getPoolConfiguratorProxy } from "../../helpers/contract-getters";
 dotenv.config();
 
 // Usage:
@@ -23,7 +24,10 @@ task("deactivate-reserve", "Deactivate a reserve in the Aave V3 protocol")
     if (!ethers.utils.isAddress(poolConfiguratorAddress)) {
       throw new Error("Invalid PoolConfigurator address fetched from PoolAddressesProvider.");
     }
-    const poolConfigurator = await ethers.getContractAt("PoolConfigurator", poolConfiguratorAddress, signer);
+    const { poolAdmin } = await hre.getNamedAccounts();
+    const poolConfigurator = (await getPoolConfiguratorProxy()).connect(
+      await hre.ethers.getSigner(poolAdmin)
+    );
     console.log(`Deactivating reserve for asset: ${asset}`);
     const tx = await poolConfigurator.setReserveActive(asset, false);
     await tx.wait();
