@@ -15,6 +15,7 @@ import {
   eOptimismNetwork,
   ePolygonNetwork,
   eBaseNetwork,
+  eBscNetwork,
 } from "./helpers/types";
 import { DEFAULT_NAMED_ACCOUNTS } from "./helpers/constants";
 
@@ -130,6 +131,10 @@ export default {
     [eBaseNetwork.baseGoerli]: getCommonNetworkConfig(
       eBaseNetwork.baseGoerli,
       84531
+    ),
+    [eBscNetwork.testnet]: getCommonNetworkConfig(
+      eBscNetwork.testnet,
+      97
     ),
   },
   namedAccounts: {

@@ -74,7 +74,7 @@ export const initReservesByHelper = async (
   )) as any as Pool;
 
   // CHUNK CONFIGURATION
-  const initChunks = 3;
+  const initChunks = 1;
 
   // Initialize variables for future reserves initialization
   let reserveTokens: string[] = [];
@@ -223,12 +223,15 @@ export const initReservesByHelper = async (
     chunkIndex++
   ) {
     const tx = await waitForTx(
-      await configurator.initReserves(chunkedInitInputParams[chunkIndex])
+      await configurator.initReserves(chunkedInitInputParams[chunkIndex], {
+        gasLimit: 5000000, // Increased gas limit for BSC Testnet
+      })
     );
 
     console.log(
       `  - Reserve ready for: ${chunkedSymbols[chunkIndex].join(", ")}`,
-      `\n    - Tx hash: ${tx.transactionHash}`
+      `\n    - Tx hash: ${tx.transactionHash}`,
+      `\n    - Gas used: ${tx.gasUsed.toString()}`
     );
   }
 };

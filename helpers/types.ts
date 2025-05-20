@@ -18,7 +18,8 @@ export type eNetwork =
   | eFantomNetwork
   | eOptimismNetwork
   | eTenderlyNetwork
-  | eBaseNetwork;
+  | eBaseNetwork
+  | eBscNetwork;
 
 type eTenderlyNetwork = "tenderly";
 
@@ -613,4 +614,9 @@ export interface IncentivesConfig {
   rewards: iParamsPerNetwork<SymbolMap<tEthereumAddress>>;
   rewardsOracle: iParamsPerNetwork<SymbolMap<tEthereumAddress>>;
   incentivesInput: iParamsPerNetwork<RewardsConfigInput[]>;
+}
+
+export enum eBscNetwork {
+  main = "bsc",
+  testnet = "bsc-testnet",
 }
