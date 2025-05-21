@@ -1,10 +1,11 @@
 import { task } from "hardhat/config";
-import { ethers } from "hardhat";
 import { loadPoolConfig, ConfigNames, getReserveAddresses } from "../../helpers/market-config-helpers";
 import { getPoolConfiguratorProxy } from "../../helpers/contract-getters";
 import { getTreasuryAddress } from "../../helpers/market-config-helpers";
 import { MARKET_NAME } from "../../helpers/env";
 import { eNetwork } from "../../helpers/types";
+import { isAddress } from "ethers/lib/utils";
+import { ZERO_ADDRESS } from "../../helpers/constants";
 
 // Usage:
 // npx hardhat add-asset-v3 --network <network> --symbol <SYMBOL>
@@ -24,7 +25,7 @@ task("add-asset-v3", "Add a new asset (reserve) to the Aave V3 protocol using co
       throw new Error(`Reserve asset address for symbol ${symbol} not found. Make sure it is added to ReserveAssets in your market config.`);
     }
     const asset = reserveAssets[symbol];
-    if (!ethers.utils.isAddress(asset)) {
+    if (!isAddress(asset)) {
       throw new Error("Invalid asset address provided in config.");
     }
     const reserveParams = reservesConfig[symbol];
@@ -41,7 +42,7 @@ task("add-asset-v3", "Add a new asset (reserve) to the Aave V3 protocol using co
     let treasury;
     try { treasury = await getTreasuryAddress(poolConfig, network); } catch { throw new Error("Treasury address not found in config."); }
     // Use AddressZero for incentivesController (or update if you have a config helper for this)
-    const incentivesController = ethers.constants.AddressZero;
+    const incentivesController = ZERO_ADDRESS;
     const decimals = reserveParams.reserveDecimals;
     const name = symbol;
     const symbolName = symbol;

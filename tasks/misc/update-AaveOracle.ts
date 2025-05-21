@@ -1,5 +1,6 @@
 import { task } from "hardhat/config";
-
+import { isAddress } from "ethers/lib/utils";
+import { getEthersSigners } from "../../helpers/utilities/signer";
 // Usage: npx hardhat update-AaveOracle --network <network> --asset <asset-address> --source <source-address>
 // command
 // npx hardhat update-AaveOracle --network sepolia --asset 0x6098Bc6CA2fDFDa186847878726AFBad1d01f13D --source  0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43
@@ -13,16 +14,16 @@ task("update-AaveOracle", "Update the price source (aggregator) for an asset in 
   .addParam("asset", "The address of the asset to update the price source for")
   .addParam("source", "The new price source (aggregator) address for the asset")
   .setAction(async ({ asset, source }, hre) => {
-    if (!hre.ethers.utils.isAddress(asset)) {
+    if (!isAddress(asset)) {
       throw new Error("Invalid asset address provided.");
     }
-    if (!hre.ethers.utils.isAddress(source)) {
+    if (!isAddress(source)) {
       throw new Error("Invalid source address provided.");
     }
-    const [signer] = await hre.ethers.getSigners();
+    const [signer] = await getEthersSigners();
     const network = hre.network.name;
     const AAVE_ORACLE_ADDRESS = aaveOracleAddresses[network];
-    if (!AAVE_ORACLE_ADDRESS || !hre.ethers.utils.isAddress(AAVE_ORACLE_ADDRESS)) {
+    if (!AAVE_ORACLE_ADDRESS || !isAddress(AAVE_ORACLE_ADDRESS)) {
       throw new Error(`AaveOracle address for network ${network} is not set in aaveOracleAddresses map.`);
     }
     const aaveOracle = await hre.ethers.getContractAt("AaveOracle", AAVE_ORACLE_ADDRESS, signer);

@@ -1,9 +1,9 @@
 import { task } from "hardhat/config";
-import { ethers } from "hardhat";
 import { getPoolConfiguratorProxy } from "../../helpers/contract-getters";
 import { loadPoolConfig, ConfigNames, getReserveAddresses } from "../../helpers/market-config-helpers";
 import { MARKET_NAME } from "../../helpers/env";
 import { eNetwork } from "../../helpers/types";
+import { isAddress } from "ethers/lib/utils";
 
 // Usage: npx hardhat set-interest-rate-strategy --network <network> --symbol <SYMBOL> --token <token-address> --strategy <strategy-address>
 
@@ -25,10 +25,10 @@ task("set-interest-rate-strategy", "Set the interest rate strategy for a reserve
     if (!asset) {
       throw new Error("You must provide either --token or --symbol (with config entry) to resolve the asset address.");
     }
-    if (!ethers.utils.isAddress(asset)) {
+    if (!isAddress(asset)) {
       throw new Error("Invalid asset address provided or resolved.");
     }
-    if (!ethers.utils.isAddress(strategy)) {
+    if (!isAddress(strategy)) {
       throw new Error("Invalid strategy address provided.");
     }
     const { poolAdmin } = await hre.getNamedAccounts();

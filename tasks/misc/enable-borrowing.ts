@@ -1,8 +1,6 @@
 import { task } from "hardhat/config";
-import { ethers } from "hardhat";
-import dotenv from "dotenv";
 import { getPoolConfiguratorProxy } from "../../helpers/contract-getters";
-dotenv.config();
+import { isAddress } from "ethers/lib/utils";
 
 // Usage:
 // npx hardhat enable-borrowing --network <network> --asset <asset-address>
@@ -10,7 +8,7 @@ dotenv.config();
 task("enable-borrowing", "Enable borrowing for a reserve in the Aave V3 protocol")
   .addParam("asset", "The address of the asset (reserve) to enable borrowing for")
   .setAction(async ({ asset }, hre) => {
-    if (!ethers.utils.isAddress(asset)) {
+    if (!isAddress(asset)) {
       throw new Error("Invalid asset address provided.");
     }
     const { poolAdmin } = await hre.getNamedAccounts();
