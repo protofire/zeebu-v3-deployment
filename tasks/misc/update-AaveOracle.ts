@@ -7,7 +7,7 @@ dotenv.config();
 
 const aaveOracleAddresses: { [network: string]: string } = {
   baseSepolia: "0xa4145d8c5A6Dac1882268F67dc71f514666052B2",
-  sepolia: "0x67B6e323248945e76e17E2cC8833E2C8C81531cb",
+  sepolia: "0xB7c437D99bD1EEd8E8D0eC4fE865b70EfBFAc1f3",
   bscTestnet: "0xD01b09FF17F93671ab39F430298C3c35DF57C168",
 };
 
