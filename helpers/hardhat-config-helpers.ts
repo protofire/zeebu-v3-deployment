@@ -48,6 +48,8 @@ export const getAlchemyKey = (net: eNetwork) => {
       return process.env.GOERLI_ALCHEMY_KEY || ALCHEMY_KEY;
     case eEthereumNetwork.sepolia:
       return process.env.SEPOLIA_ALCHEMY_KEY || ALCHEMY_KEY;
+    case eEthereumNetwork.baseSepolia:
+      return process.env.BASE_SEPOLIA_ALCHEMY_KEY || ALCHEMY_KEY;
     case eBaseNetwork.base:
       return process.env.BASE_ALCHEMY_KEY || ALCHEMY_KEY;
     default:
@@ -93,6 +95,7 @@ export const NETWORKS_RPC_URL: iParamsPerNetwork<string> = {
   [eEthereumNetwork.sepolia]: `https://eth-sepolia.g.alchemy.com/v2/${getAlchemyKey(
     eEthereumNetwork.sepolia
   )}`,
+  [eEthereumNetwork.baseSepolia]: `https://sepolia.base.org`,
   [eArbitrumNetwork.goerliNitro]: `https://goerli-rollup.arbitrum.io/rpc`,
   [eBaseNetwork.baseGoerli]: `https://goerli.base.org`,
   [eBaseNetwork.base]: `https://base-mainnet.g.alchemy.com/v2/${getAlchemyKey(
@@ -110,6 +113,7 @@ export const LIVE_NETWORKS: iParamsPerNetwork<boolean> = {
   [eOptimismNetwork.main]: true,
   [eBaseNetwork.base]: true,
   [eEthereumNetwork.sepolia]: true,
+  [eEthereumNetwork.baseSepolia]: true,
 };
 
 const GAS_PRICE_PER_NET: iParamsPerNetwork<string | number> = {

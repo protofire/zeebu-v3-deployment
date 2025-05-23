@@ -118,6 +118,10 @@ export default {
       eEthereumNetwork.sepolia,
       11155111
     ),
+    [eEthereumNetwork.baseSepolia]: getCommonNetworkConfig(
+      eEthereumNetwork.baseSepolia,
+      84532
+    ),
     [eArbitrumNetwork.goerliNitro]: getCommonNetworkConfig(
       eArbitrumNetwork.goerliNitro,
       421613
@@ -215,6 +219,14 @@ export default {
         urls: {
           apiURL: "https://api.basescan.org/api",
           browserURL: "https://basescan.org/",
+        },
+      },
+      {
+        network: eEthereumNetwork.baseSepolia,
+        chainId: 84532,
+        urls: {
+          apiURL: "https://api-sepolia.basescan.org/api",
+          browserURL: "https://sepolia.basescan.org/",
         },
       },
     ],

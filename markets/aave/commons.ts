@@ -55,6 +55,15 @@ export const CommonsConfig: ICommonConfiguration = {
       WSTZBU: '0x880048E759fCA906e780433BF1CEC3Dd3559934B',
       ZBU: '0xA83fE18C7AcccBFeCB461122c7645f9FcbB6e043',
     },
+    [eEthereumNetwork.baseSepolia]: {
+      USDC: '0xd30e2101a97dcbAeBCBC04F14C3f624E67A35165',
+      WBTC: '0x0FB99723Aee6f420beAD13e6bBB79b7E6F034298',
+      WETH: '0x4aDC67696bA383F43DD60A9e78F2C97Fbbfc7cb1',
+      USDT: '0xd30e2101a97dcbAeBCBC04F14C3f624E67A35165',
+      USDOX: '0xB4b83BFc71bedc0fc793C462ec5eB34BbB0f61a8',
+      WSTZBU: '0xD119F31dA03362a40EB2BF259aA8B6B6B974AdB5',
+      ZBU: '0x45347837B2Ab23cAe89F8C9bA80e11cd3a6Fd8fa',
+    },
     [eEthereumNetwork.rinkeby]: {
       LINK: ZERO_ADDRESS,
       USDC: ZERO_ADDRESS,
@@ -72,6 +81,7 @@ export const CommonsConfig: ICommonConfiguration = {
       "0xeC67987831C4278160D8e652d3edb0Fc45B3766d",
     [eEthereumNetwork.rinkeby]: ZERO_ADDRESS,
     [eEthereumNetwork.sepolia]: ZERO_ADDRESS,
+    [eEthereumNetwork.baseSepolia]: ZERO_ADDRESS,
   },
   FallbackOracle: {
     [eEthereumNetwork.kovan]: ZERO_ADDRESS,
@@ -80,6 +90,7 @@ export const CommonsConfig: ICommonConfiguration = {
     [eArbitrumNetwork.arbitrumTestnet]: ZERO_ADDRESS,
     [eEthereumNetwork.rinkeby]: ZERO_ADDRESS,
     [eEthereumNetwork.sepolia]: ZERO_ADDRESS,
+    [eEthereumNetwork.baseSepolia]: ZERO_ADDRESS,
   },
   ReservesConfig: {},
   IncentivesConfig: {
@@ -174,10 +185,11 @@ export const CommonsConfig: ICommonConfiguration = {
     [eBaseNetwork.base]: true,
     [eBaseNetwork.baseGoerli]: true,
     [eEthereumNetwork.sepolia]: false,
+    [eEthereumNetwork.baseSepolia]: false,
   },
   ParaswapRegistry: {
     [eEthereumNetwork.main]: "0xa68bEA62Dc4034A689AA0F58A76681433caCa663",
-    [ePolygonNetwork.polygon]: "0xca35a4866747Ff7A604EF7a2A7F246bb870f3ca1",
+    [ePolygonNetwork.polygon]: "0xca35a4866747Ff7a604EF7a2A7F246bb870f3ca1",
     [eAvalancheNetwork.avalanche]: "0xfD1E5821F07F1aF812bB7F3102Bfd9fFb279513a",
     [eFantomNetwork.main]: "0x161383b5dAFc1cc05Ec058e5B0b0703BA175bdA6",
     [eArbitrumNetwork.arbitrum]: "0xdC6E2b14260F972ad4e5a31c68294Fba7E720701",
