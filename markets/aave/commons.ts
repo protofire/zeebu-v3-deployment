@@ -7,6 +7,7 @@ import {
   ePolygonNetwork,
   TransferStrategy,
   eBaseNetwork,
+  eBscNetwork,
 } from "./../../helpers/types";
 import { ZERO_ADDRESS } from "../../helpers/constants";
 import {
@@ -73,6 +74,15 @@ export const CommonsConfig: ICommonConfiguration = {
       USDT: ZERO_ADDRESS,
       EURS: ZERO_ADDRESS,
     },
+    [eBscNetwork.testnet]: {
+      USDC: '0x90c069C4538adAc136E051052E14c1cD799C41B7',
+      WBTC: '0x5741306c21795FdCBb9b265Ea0255F499DFe515C',
+      WETH: '0x143db3CEEfbdfe5631aDD3E50f7614B6ba708BA7',
+      USDT: '0xEca2605f0BCF2BA5966372C99837b1F182d3D620',
+      USDOX: '0x83de4272a6b4a62e099A5dBeDf597747F59288D7',
+      WSTZBU: '0x7F002de2feB0bED0eAb73aF31c291d2cFff74779',
+      ZBU: '0xD119F31dA03362a40EB2BF259aA8B6B6B974AdB5',
+    },
   },
   ReserveFactorTreasuryAddress: {
     [eEthereumNetwork.kovan]: "0x464c71f6c2f760dda6093dcb91c24c39e5d6e18c",
@@ -82,6 +92,7 @@ export const CommonsConfig: ICommonConfiguration = {
     [eEthereumNetwork.rinkeby]: ZERO_ADDRESS,
     [eEthereumNetwork.sepolia]: ZERO_ADDRESS,
     [eEthereumNetwork.baseSepolia]: ZERO_ADDRESS,
+    [eBscNetwork.testnet]: ZERO_ADDRESS,
   },
   FallbackOracle: {
     [eEthereumNetwork.kovan]: ZERO_ADDRESS,
@@ -91,6 +102,7 @@ export const CommonsConfig: ICommonConfiguration = {
     [eEthereumNetwork.rinkeby]: ZERO_ADDRESS,
     [eEthereumNetwork.sepolia]: ZERO_ADDRESS,
     [eEthereumNetwork.baseSepolia]: ZERO_ADDRESS,
+    [eBscNetwork.testnet]: ZERO_ADDRESS,
   },
   ReservesConfig: {},
   IncentivesConfig: {
@@ -186,6 +198,7 @@ export const CommonsConfig: ICommonConfiguration = {
     [eBaseNetwork.baseGoerli]: true,
     [eEthereumNetwork.sepolia]: false,
     [eEthereumNetwork.baseSepolia]: false,
+    [eBscNetwork.testnet]: false,
   },
   ParaswapRegistry: {
     [eEthereumNetwork.main]: "0xa68bEA62Dc4034A689AA0F58A76681433caCa663",

@@ -12,6 +12,7 @@ import {
   eFantomNetwork,
   eOptimismNetwork,
   eBaseNetwork,
+  eBscNetwork,
 } from "./types";
 
 require("dotenv").config();
@@ -52,6 +53,8 @@ export const getAlchemyKey = (net: eNetwork) => {
       return process.env.BASE_SEPOLIA_ALCHEMY_KEY || ALCHEMY_KEY;
     case eBaseNetwork.base:
       return process.env.BASE_ALCHEMY_KEY || ALCHEMY_KEY;
+    case eBscNetwork.testnet:
+      return process.env.BSC_TESTNET_ALCHEMY_KEY || ALCHEMY_KEY;
     default:
       return ALCHEMY_KEY;
   }
@@ -101,6 +104,7 @@ export const NETWORKS_RPC_URL: iParamsPerNetwork<string> = {
   [eBaseNetwork.base]: `https://base-mainnet.g.alchemy.com/v2/${getAlchemyKey(
     eBaseNetwork.base
   )}`,
+  [eBscNetwork.testnet]: `https://bsc-testnet.infura.io/v3/${INFURA_KEY}`,
 };
 
 export const LIVE_NETWORKS: iParamsPerNetwork<boolean> = {
@@ -114,11 +118,13 @@ export const LIVE_NETWORKS: iParamsPerNetwork<boolean> = {
   [eBaseNetwork.base]: true,
   [eEthereumNetwork.sepolia]: true,
   [eEthereumNetwork.baseSepolia]: true,
+  [eBscNetwork.testnet]: true,
 };
 
 const GAS_PRICE_PER_NET: iParamsPerNetwork<string | number> = {
   [eArbitrumNetwork.goerliNitro]: 100000001,
   [eBaseNetwork.baseGoerli]: 8000000000,
+  [eBscNetwork.testnet]: 10000000000,
 };
 
 export const buildForkConfig = ():

@@ -1,4 +1,4 @@
-import { eOptimismNetwork } from "./../../helpers/types";
+import { eOptimismNetwork, eBscNetwork } from "./../../helpers/types";
 import { ZERO_ADDRESS } from "../../helpers";
 import {
   IAaveConfiguration,
@@ -84,6 +84,15 @@ export const AaveMarket: IAaveConfiguration = {
       WETH: ZERO_ADDRESS,
       USDT: ZERO_ADDRESS,
       // EURS: ZERO_ADDRESS,
+    },
+    [eBscNetwork.testnet]: {
+      USDC: '0xBA959085D18a436e38C49dfBB4dE1577A04Cfc82',
+      WBTC: '0xb5F8e2C38b25D914d7E87562A8fE5f379EfbF720',
+      WETH: '0x24C9184c7DA6CA2F3B5cF55E646E9CD581b89dA7',
+      USDT: '0x2dfad6c444039A9E56801FbaF819851A485e254A',
+      USDOX: '0x18Aa55A2192058f4e207ad0029523e83486E757F',
+      WSTZBU: '0x19f59C5bAabaEf87E1bc1Df1ec8868711ADC22e6',
+      ZBU: '0xb9494eE5c37A44df967dc2826df9c9D2269aBB4A',
     },
   },
   StkAaveProxy: {
