@@ -5,9 +5,9 @@ import { getEthersSigners } from "../../helpers/utilities/signer";
 // command
 // npx hardhat update-AaveOracle --network sepolia --asset 0x6098Bc6CA2fDFDa186847878726AFBad1d01f13D --source  0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43
 const aaveOracleAddresses: { [network: string]: string } = {
-  baseSepolia: "0xa4145d8c5A6Dac1882268F67dc71f514666052B2",
+  "base-sepolia": "0x8d8A0455A4e2bce4c06e854E0887686D1a60B830",
   sepolia: "0xB7c437D99bD1EEd8E8D0eC4fE865b70EfBFAc1f3",
-  bscTestnet: "0xD01b09FF17F93671ab39F430298C3c35DF57C168",
+  "bsc-testnet": "0xD2b329FC99Cb9546fbb32F3FFc87Fa4Cdd5cDCB3",
 };
 
 task("update-AaveOracle", "Update the price source (aggregator) for an asset in the Aave V3 Oracle")
