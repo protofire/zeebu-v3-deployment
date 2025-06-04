@@ -221,3 +221,31 @@ export const strategyZBU: IReserveParams = {
   debtCeiling: "0",
   borrowableIsolation: false,
 };
+
+export const strategyDLP: IReserveParams = {
+  strategy: rateStrategyStableTwo,
+  baseLTVAsCollateral: '7500',
+  liquidationThreshold: '8000',
+  liquidationBonus: '10500',
+  borrowingEnabled: false,
+  stableBorrowRateEnabled: true,
+  flashLoanEnabled: false,
+  reserveDecimals: '6',
+  aTokenImpl: eContractid.AToken,
+  reserveFactor: '0',
+  supplyCap: '0',
+  borrowCap: '0',
+  debtCeiling: '0',
+  borrowableIsolation: false,
+};
+
+export const allReserveConfigs = {
+  DLP: strategyDLP,
+  USDC: strategyUSDC,
+  WBTC: strategyWBTC,
+  WETH: strategyWETH,
+  USDT: strategyUSDT,
+  USDOX: strategyUSDOX,
+  WSTZBU: strategyWSTZBU,
+  ZBU: strategyZBU,
+}
