@@ -56,6 +56,7 @@ export const CommonsConfig: ICommonConfiguration = {
       WSTZBU: '0x0FCf7bCbfD45eCe6724c43EE7233E21261098E53',
       ZBU: '0xA83fE18C7AcccBFeCB461122c7645f9FcbB6e043',
       DLP: '0xA83fE18C7AcccBFeCB461122c7645f9FcbB6e043',
+      USDCWBTC: '0x9c22fEdAB17288Dde4b1B66C86bB5Ea8dF0739e6',
     },
     [eEthereumNetwork.baseSepolia]: {
       USDC: '0xd30e2101a97dcbAeBCBC04F14C3f624E67A35165',
