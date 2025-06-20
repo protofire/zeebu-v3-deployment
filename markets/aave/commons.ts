@@ -37,15 +37,13 @@ export const CommonsConfig: ICommonConfiguration = {
   WrappedNativeTokenSymbol: "WETH",
   ChainlinkAggregator: {
     [eEthereumNetwork.main]: {
-      // AAVE: "0x547a514d5e3769680Ce22B2361c10Ea13619e8a9",
-      // DAI: "0xAed0c38402a5d19df6E4c03F4E2DceD6e29c1ee9",
-      // LINK: "0x2c1d072e956AFFC0D435Cb7AC38EF18d24d9127c",
       USDC: "0x8fFfFfd4AfB6115b954Bd326cbe7B4BA576818f6",
       WBTC: "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
       WETH: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
       USDT: "0x3E7d1eAB13ad0104d2750B8863b489D65364e32D",
-      // Note: EUR/USD, not EURS dedicated oracle
-      // EURS: "0xb49f677943BC038e9857d61E7d053CaA2C1734C1",
+      USDOX: "0x5c66322CA59bB61e867B28195576DbD8dA4b08dE",//.....DAI
+      WSTZBU: '0xC7e9b623ed51F033b32AE7f1282b1AD62C28C183',//....LINK
+      ZBU: "0xF02C1e2A3B77c1cacC72f72B44f7d0a4c62e4a85",//.......AAVE
     },
     [eEthereumNetwork.sepolia]: {
       USDC: '0https://sepolia.etherscan.io/tx/0xdc2aa0cf98f210c53a07871faf3b76049270c2f8b2fdb6f5b673140e70b1a10cxA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E',

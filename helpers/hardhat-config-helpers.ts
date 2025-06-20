@@ -64,6 +64,9 @@ export const NETWORKS_RPC_URL: iParamsPerNetwork<string> = {
   [eEthereumNetwork.kovan]: `https://eth-kovan.alchemyapi.io/v2/${getAlchemyKey(
     eEthereumNetwork.kovan
   )}`,
+  // [eEthereumNetwork.main]: `https://eth-mainnet.alchemyapi.io/v2/${getAlchemyKey(
+  //   eEthereumNetwork.main
+  // )}`,
   [eEthereumNetwork.main]: `https://eth-mainnet.alchemyapi.io/v2/${getAlchemyKey(
     eEthereumNetwork.main
   )}`,
