@@ -1,0 +1,11 @@
+{
+  "PoolAddressesProviderRegistry": 1746747748,
+  "LogicLibraries": 1746747916,
+  "Treasury": 1746748287,
+  "PoolAddressesProvider:Aave:aave-v3-core@1.19.3": 1746748358,
+  "PoolConfigurator": 1746748418,
+  "ACLManager:Aave:aave-v3-core@1.19.3": 1746748517,
+  "Oracles:Aave:aave-v3-core@1.19.3": 1746748528,
+  "InitOracles:Aave:aave-v3-core@1.19.3": 1746748539,
+  "PoolInitalization:Aave:aave-v3-core@1.19.3": 1746748599
+}
