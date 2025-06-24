@@ -1,0 +1,59 @@
+Deployments
+===========
+┌─────────────────────────────────────────┬──────────────────────────────────────────────┐
+│                 (index)                 │                   address                    │
+├─────────────────────────────────────────┼──────────────────────────────────────────────┤
+│            ACLManager-Zeebu             │ '0x1994000f3CA505814302461dF9C4301F0bb49C80' │
+│            AaveOracle-Zeebu             │ '0x30CdD0CB22aaE5dc200A87ab7a8a6eC17Ee2f707' │
+│               BorrowLogic               │ '0x6b7226E3F7f9ba9D77E653778E8DD9F2eDbf3A8E' │
+│               BridgeLogic               │ '0xf310f516D3f519bFD196729A10E34e905A2F7C35' │
+│            ConfiguratorLogic            │ '0x9f105d22a13F18Ca69CFD554A90db97679A73Ff2' │
+│       DelegationAwareZToken-Zeebu       │ '0x82E3f18908d478622Bb7602321Ad87B611193b3a' │
+│               EModeLogic                │ '0xBA7B98aCe2587479F43be2258f3eF4e5C30e9d0F' │
+│             EmissionManager             │ '0x05ec0Ec93F7638F3901287e251302840E95f446d' │
+│             FlashLoanLogic              │ '0xD170F71b1931A5BfA5dA932956f89e06f421Cd9C' │
+│             IncentivesProxy             │ '0x5585c66258E90FCCD6F504d29aa1c71443ec2063' │
+│       IncentivesV2-Implementation       │ '0xBc826ed2009Ab842CA01c8f287bF970e0c0c4616' │
+│            LiquidationLogic             │ '0x116468729dd7ea76A371b8e7a838953908604C01' │
+│      ParaSwapLiquiditySwapAdapter       │ '0xbDb5d4d7887b16AB2e08916D128e1bf59F610ee1' │
+│           Pool-Implementation           │ '0x6260F9cca61089E85FA9D6B7B229F4f009b8CB03' │
+│            Pool-Proxy-Zeebu             │ '0x90749C779b9b7Df8f81B3a08B508CD71C9B17A42' │
+│       PoolAddressesProvider-Zeebu       │ '0xb3837043E2b76Cf4E6920fB25179E59d943B70b7' │
+│      PoolAddressesProviderRegistry      │ '0xE274aafe665e2C841894498270e36540ec0E2098' │
+│     PoolConfigurator-Implementation     │ '0x92b2DF3913D6775dB3036E6B934468E62bE11942' │
+│      PoolConfigurator-Proxy-Zeebu       │ '0x12A49254C83C97B4302C9d9c1aD8aFf2EF92471C' │
+│         PoolDataProvider-Zeebu          │ '0xc6C28D03F70Bdc1Bd278a35a2200B873F819A8d5' │
+│                PoolLogic                │ '0xD458a13183d50d945A9a607c51c6ed68cB0191d8' │
+│  ReserveStrategy-rateStrategyStableOne  │ '0x993a30Dd503dC0ed9a4A6AF635dE26D4d1087276' │
+│  ReserveStrategy-rateStrategyStableTwo  │ '0x8C21b9365cceE025B7cDCABf081CFbE879c7B0BC' │
+│ ReserveStrategy-rateStrategyVolatileOne │ '0xFB240FE2c8f586523d16539eE7c782F7f1973145' │
+│           ReservesSetupHelper           │ '0xB0Ce791Ce8baEe0F6799B11A103D9E6CDa38CD46' │
+│          StableDebtToken-Zeebu          │ '0x98f903987AF9D86B4D18c0Ff95FAFF1676F869e6' │
+│               SupplyLogic               │ '0xfa675aA0645DBe41ae0762Ce2D6c6802C7Eb9930' │
+│           Treasury-Controller           │ '0x07cF3Be0b84E7CAB27F7064963bDd5b31dA4a0b9' │
+│         Treasury-Implementation         │ '0x2AE0EB03C498d4eAD174c123f1f6bBb94582BC6e' │
+│              TreasuryProxy              │ '0xa9A9dCac3834008B437a30a4d3118c2Ce0490C6F' │
+│       USDC-StableDebtToken-Zeebu        │ '0x376780eC81112b5733818D8914cd3D1de75B2ecB' │
+│      USDC-VariableDebtToken-Zeebu       │ '0x93Fc6bFbA23bDaF48cB0241A18B65da69BE036fa' │
+│            USDC-ZToken-Zeebu            │ '0x3630d8076519d327a6FEbCD319ADfeb8B7b6D12c' │
+│       USDT-StableDebtToken-Zeebu        │ '0x925bF7Da0dCAe399F468a75435ADe7621F664c33' │
+│      USDT-VariableDebtToken-Zeebu       │ '0x22d6Bd5009fB927Cd6DEbc93f6eBA20Be5403bC0' │
+│            USDT-ZToken-Zeebu            │ '0x13B2f570bE816Ad34CEe7ed79bCD960a4Da8907E' │
+│        UiIncentiveDataProviderV3        │ '0xaB33cc1D884C473Af7259B50D267Dd60B23309bc' │
+│          UiPoolDataProviderV3           │ '0x3A0C6c7AdffE64257e75392D9180bF14Eafb0446' │
+│         VariableDebtToken-Zeebu         │ '0x55afed656840f77009d2b173145d3258Ffa998A5' │
+│       WBTC-StableDebtToken-Zeebu        │ '0x1Bc45FC08276E002C332723181e831Ce32E807fC' │
+│      WBTC-VariableDebtToken-Zeebu       │ '0x99114861DBF8a9d6CCe7440fA0AB906668311d3B' │
+│            WBTC-ZToken-Zeebu            │ '0x5DFAfD186cf67ddA58F03aaEB517Cb70F02e18F6' │
+│       WETH-StableDebtToken-Zeebu        │ '0x97d1345Ac327F7341fb43Ef5b5d23486F9dc0203' │
+│      WETH-VariableDebtToken-Zeebu       │ '0xE936616CEF6b82eD4aABBEE7D976062F182245D7' │
+│            WETH-ZToken-Zeebu            │ '0x1DA71cB8B0776382A8fD334B1BC3B76FeF36d329' │
+│          WalletBalanceProvider          │ '0x3EA9E0D328F87f340b4E05a18C30C39894E986db' │
+│          WrappedTokenGatewayV3          │ '0x277F62F484EBC6c032D544F6103992E658D689F3' │
+│        ZBU-StableDebtToken-Zeebu        │ '0x783DBE4614b06F8CF61bCbCcd30D34D66aC994b4' │
+│       ZBU-VariableDebtToken-Zeebu       │ '0x3A53E2Ab112b8208593697cc1A15c97E4c8f15e0' │
+│            ZBU-ZToken-Zeebu             │ '0x596e8112e2ecD9D690429bA488b3cda055775943' │
+│              ZToken-Zeebu               │ '0xdCa85A287073000155E48Af9c268e858011Ebeee' │
+│          ParaSwapRepayAdapter           │ '0x4E959ef697fFFEB80253A1f6d70652E83e9fFD3e' │
+│       ParaSwapWithdrawSwapAdapter       │ '0xC1C0FA61BacA79501A98e65f4c03961C7225B257' │
+└─────────────────────────────────────────┴──────────────────────────────────────────────┘

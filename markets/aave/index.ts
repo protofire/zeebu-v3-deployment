@@ -28,7 +28,7 @@ import {
 
 export const AaveMarket: IAaveConfiguration = {
   ...CommonsConfig,
-  MarketId: "Ethereum Aave Market V2",
+  MarketId: "Ethereum Zeebu Market V2",
   ATokenNamePrefix: "Ethereum",
   StableDebtTokenNamePrefix: "Ethereum",
   VariableDebtTokenNamePrefix: "Ethereum",
@@ -43,10 +43,11 @@ export const AaveMarket: IAaveConfiguration = {
     WBTC: strategyWBTC,
     WETH: strategyWETH,
     USDT: strategyUSDT,
-    USDOX: strategyUSDOX,
-    WSTZBU: strategyWSTZBU,
     ZBU: strategyZBU,
-    DLP: strategyDLP,
+    // USDOX: strategyUSDOX,
+    // WSTZBU: strategyWSTZBU,
+    // ZBU: strategyZBU,
+    // DLP: strategyDLP,
   },
   ReserveAssets: {
     [eEthereumNetwork.main]: {
@@ -54,19 +55,17 @@ export const AaveMarket: IAaveConfiguration = {
       WBTC: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
       WETH: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
       USDT: "0xdac17f958d2ee523a2206206994597c13d831ec7",
-      USDOX: '0xdac17f958d2ee523a2206206994597c13d831ec7',//.....DAI
-      WSTZBU: '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599',//....LINK
-      ZBU: '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599',//.......AAVE
+      ZBU: "0xe77f6acd24185e149e329c1c0f479201b9ec2f4b",
     },
     [eEthereumNetwork.sepolia]: {
       USDC: '0x1c9b6337b001704d54B13FBA5C06Fe5D43061a8E',
       WBTC: '0x4647044B0B264C771510FdB2764587B1fc7B599B',
       WETH: '0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14',
       USDT: '0x2516196DA3849e85a6887B78edcb48C1eeF2eb89',
-      USDOX: '0x8C97603960783e5EbaA727E50c02821C833de5b0',
-      WSTZBU: '0xCB2693c8503F51fA42Cfd5952dc078951389448E',
+      // USDOX: '0x8C97603960783e5EbaA727E50c02821C833de5b0',
+      // WSTZBU: '0xCB2693c8503F51fA42Cfd5952dc078951389448E',
       ZBU: '0x6098Bc6CA2fDFDa186847878726AFBad1d01f13D',
-      DLP: '0x4e3C5F14599284E4B4444e700D0bF3fE1ff9059C',
+      // DLP: '0x4e3C5F14599284E4B4444e700D0bF3fE1ff9059C',
     },
     [eEthereumNetwork.baseSepolia]: {
       USDC: '0xC30752a94e043DDcb9DCf313e8CAEADF5Ad5Aa36',

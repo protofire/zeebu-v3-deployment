@@ -41,19 +41,17 @@ export const CommonsConfig: ICommonConfiguration = {
       WBTC: "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
       WETH: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
       USDT: "0x3E7d1eAB13ad0104d2750B8863b489D65364e32D",
-      USDOX: "0x5c66322CA59bB61e867B28195576DbD8dA4b08dE",//.....DAI
-      WSTZBU: '0xC7e9b623ed51F033b32AE7f1282b1AD62C28C183',//....LINK
-      ZBU: "0xF02C1e2A3B77c1cacC72f72B44f7d0a4c62e4a85",//.......AAVE
+      ZBU: "0x617689cAB8329d57fEa64f4C086190E6797b8B5e",
     },
     [eEthereumNetwork.sepolia]: {
-      USDC: '0https://sepolia.etherscan.io/tx/0xdc2aa0cf98f210c53a07871faf3b76049270c2f8b2fdb6f5b673140e70b1a10cxA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E',
+      USDC: '0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E',
       WBTC: '0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43',
       WETH: '0x694AA1769357215DE4FAC081bf1f309aDC325306',
       USDT: '0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E',
-      USDOX: '0x3268F7B3860d6d41135E53A7c053EFd26E8F7Bd7',
-      WSTZBU: '0x0FCf7bCbfD45eCe6724c43EE7233E21261098E53',
+      // USDOX: '0x3268F7B3860d6d41135E53A7c053EFd26E8F7Bd7',
+      // WSTZBU: '0x0FCf7bCbfD45eCe6724c43EE7233E21261098E53',
       ZBU: '0xA83fE18C7AcccBFeCB461122c7645f9FcbB6e043',
-      DLP: '0xA83fE18C7AcccBFeCB461122c7645f9FcbB6e043',
+      // DLP: '0xA83fE18C7AcccBFeCB461122c7645f9FcbB6e043',
     },
     [eEthereumNetwork.baseSepolia]: {
       USDC: '0xd30e2101a97dcbAeBCBC04F14C3f624E67A35165',
@@ -85,7 +83,7 @@ export const CommonsConfig: ICommonConfiguration = {
   },
   ReserveFactorTreasuryAddress: {
     [eEthereumNetwork.kovan]: "0x464c71f6c2f760dda6093dcb91c24c39e5d6e18c",
-    [eEthereumNetwork.main]: "0x464c71f6c2f760dda6093dcb91c24c39e5d6e18c",
+    [eEthereumNetwork.main]: ZERO_ADDRESS,
     [eArbitrumNetwork.arbitrumTestnet]:
       "0xeC67987831C4278160D8e652d3edb0Fc45B3766d",
     [eEthereumNetwork.rinkeby]: ZERO_ADDRESS,
