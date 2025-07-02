@@ -37,26 +37,22 @@ export const CommonsConfig: ICommonConfiguration = {
   WrappedNativeTokenSymbol: "WETH",
   ChainlinkAggregator: {
     [eEthereumNetwork.main]: {
-      // AAVE: "0x547a514d5e3769680Ce22B2361c10Ea13619e8a9",
-      // DAI: "0xAed0c38402a5d19df6E4c03F4E2DceD6e29c1ee9",
-      // LINK: "0x2c1d072e956AFFC0D435Cb7AC38EF18d24d9127c",
       USDC: "0x8fFfFfd4AfB6115b954Bd326cbe7B4BA576818f6",
       WBTC: "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
       WETH: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
       USDT: "0x3E7d1eAB13ad0104d2750B8863b489D65364e32D",
-      // Note: EUR/USD, not EURS dedicated oracle
-      // EURS: "0xb49f677943BC038e9857d61E7d053CaA2C1734C1",
+      ZBU: "0x617689cAB8329d57fEa64f4C086190E6797b8B5e",
     },
     [eEthereumNetwork.sepolia]: {
-      USDC: '0https://sepolia.etherscan.io/tx/0xdc2aa0cf98f210c53a07871faf3b76049270c2f8b2fdb6f5b673140e70b1a10cxA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E',
+      USDC: '0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E',
       WBTC: '0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43',
       WETH: '0x694AA1769357215DE4FAC081bf1f309aDC325306',
       USDT: '0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E',
-      USDOX: '0x3268F7B3860d6d41135E53A7c053EFd26E8F7Bd7',
-      WSTZBU: '0x0FCf7bCbfD45eCe6724c43EE7233E21261098E53',
+      // USDOX: '0x3268F7B3860d6d41135E53A7c053EFd26E8F7Bd7',
+      // WSTZBU: '0x0FCf7bCbfD45eCe6724c43EE7233E21261098E53',
       ZBU: '0xA83fE18C7AcccBFeCB461122c7645f9FcbB6e043',
-      DLP: '0xA83fE18C7AcccBFeCB461122c7645f9FcbB6e043',
-      USDCWBTC: '0x9c22fEdAB17288Dde4b1B66C86bB5Ea8dF0739e6',
+      // DLP: '0xA83fE18C7AcccBFeCB461122c7645f9FcbB6e043',
+      // USDCWBTC: '0x9c22fEdAB17288Dde4b1B66C86bB5Ea8dF0739e6',
     },
     [eEthereumNetwork.baseSepolia]: {
       USDC: '0xd30e2101a97dcbAeBCBC04F14C3f624E67A35165',
@@ -88,7 +84,7 @@ export const CommonsConfig: ICommonConfiguration = {
   },
   ReserveFactorTreasuryAddress: {
     [eEthereumNetwork.kovan]: "0x464c71f6c2f760dda6093dcb91c24c39e5d6e18c",
-    [eEthereumNetwork.main]: "0x464c71f6c2f760dda6093dcb91c24c39e5d6e18c",
+    [eEthereumNetwork.main]: ZERO_ADDRESS,
     [eArbitrumNetwork.arbitrumTestnet]:
       "0xeC67987831C4278160D8e652d3edb0Fc45B3766d",
     [eEthereumNetwork.rinkeby]: ZERO_ADDRESS,

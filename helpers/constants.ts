@@ -142,7 +142,7 @@ export const EMPTY_STORAGE_SLOT =
 export const POOL_ADMIN: Record<string, string> = {
   [eArbitrumNetwork.arbitrum]: "0xbbd9f90699c1FA0D7A65870D241DD1f1217c96Eb",
   [eAvalancheNetwork.avalanche]: "0xa35b76E4935449E33C56aB24b23fcd3246f13470",
-  [eFantomNetwork.main]: "0x39CB97b105173b56b5a2b4b33AD25d6a50E6c949",
+  [eFantomNetwork.main]: "0xFD1098be8b44B75d3E0d4fa7e9FD1707713983Cc",
   [eHarmonyNetwork.main]: "0xb2f0C5f37f4beD2cB51C44653cD5D84866BDcd2D",
   [eOptimismNetwork.main]: "0xE50c8C619d05ff98b22Adf991F17602C774F785c",
   [ePolygonNetwork.polygon]: "0xdc9A35B16DB4e126cFeDC41322b3a36454B1F772",
@@ -158,7 +158,7 @@ export const POOL_ADMIN: Record<string, string> = {
 export const EMERGENCY_ADMIN: Record<string, string> = {
   [eArbitrumNetwork.arbitrum]: "0xbbd9f90699c1FA0D7A65870D241DD1f1217c96Eb",
   [eAvalancheNetwork.avalanche]: "0xa35b76E4935449E33C56aB24b23fcd3246f13470",
-  [eFantomNetwork.main]: "0x39CB97b105173b56b5a2b4b33AD25d6a50E6c949",
+  [eFantomNetwork.main]: "0x21EdC8c5aB4BA9108C0F3Acb88c99EA9946702D4",
   [eHarmonyNetwork.main]: "0xb2f0C5f37f4beD2cB51C44653cD5D84866BDcd2D",
   [eOptimismNetwork.main]: "0xE50c8C619d05ff98b22Adf991F17602C774F785c",
   [ePolygonNetwork.polygon]: "0x1450F2898D6bA2710C98BE9CAF3041330eD5ae58",
@@ -176,7 +176,7 @@ export const DEFAULT_NAMED_ACCOUNTS = {
     default: 0,
   },
   emergencyAdmin: {
-    default: 0,
+    default: 2,
   },
   poolAdmin: {
     default: 0,
@@ -185,10 +185,10 @@ export const DEFAULT_NAMED_ACCOUNTS = {
     default: 0,
   },
   treasuryProxyAdmin: {
-    default: 1,
+    default: 0,
   },
   incentivesProxyAdmin: {
-    default: 1,
+    default: 0,
   },
   incentivesEmissionManager: {
     default: 0,
