@@ -20,6 +20,7 @@ import {
   strategyZBU,
   strategyDLP,
   // strategyEURS,
+  strategyUSDCWBTC,
 } from "./reservesConfigs";
 
 // ----------------
@@ -48,6 +49,8 @@ export const AaveMarket: IAaveConfiguration = {
     // WSTZBU: strategyWSTZBU,
     // ZBU: strategyZBU,
     // DLP: strategyDLP,
+    // DLP: strategyDLP,
+    // USDCWBTC: strategyUSDCWBTC,
   },
   ReserveAssets: {
     [eEthereumNetwork.main]: {
@@ -66,6 +69,7 @@ export const AaveMarket: IAaveConfiguration = {
       // WSTZBU: '0xCB2693c8503F51fA42Cfd5952dc078951389448E',
       ZBU: '0x6098Bc6CA2fDFDa186847878726AFBad1d01f13D',
       // DLP: '0x4e3C5F14599284E4B4444e700D0bF3fE1ff9059C',
+      // USDCWBTC: '0x68fDF84047B4dD9c5176Cbd6987b92146A769F04',
     },
     [eEthereumNetwork.baseSepolia]: {
       USDC: '0xC30752a94e043DDcb9DCf313e8CAEADF5Ad5Aa36',
