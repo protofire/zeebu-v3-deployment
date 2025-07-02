@@ -64,10 +64,7 @@ export const NETWORKS_RPC_URL: iParamsPerNetwork<string> = {
   [eEthereumNetwork.kovan]: `https://eth-kovan.alchemyapi.io/v2/${getAlchemyKey(
     eEthereumNetwork.kovan
   )}`,
-  // [eEthereumNetwork.main]: `https://eth-mainnet.alchemyapi.io/v2/${getAlchemyKey(
-  //   eEthereumNetwork.main
-  // )}`,
-  [eEthereumNetwork.main]: 'https://mainnet.infura.io/v3/2ff6dd93851b4aaeb9df4d0a4de9b85b',//`https://virtual.mainnet.rpc.tenderly.co/ef519b8e-b512-459e-9e35-829a43dfd2c8`,
+  [eEthereumNetwork.main]: process.env.TENDERLY_MAINNET_RPC_URL || `https://mainnet.infura.io/v3/${INFURA_KEY}`,
   [eEthereumNetwork.coverage]: "http://localhost:8555",
   [eEthereumNetwork.hardhat]: "http://localhost:8545",
   [ePolygonNetwork.mumbai]: `https://polygon-mumbai.g.alchemy.com/v2/${getAlchemyKey(
@@ -199,14 +196,14 @@ export const hardhatNetworkSettings = {
     initialIndex: 0,
     count: 10,
   },
-    // FORK && !!MNEMONIC
-    //   ? {
-    //       mnemonic: MNEMONIC,
-    //       path: MNEMONIC_PATH,
-    //       initialIndex: 0,
-    //       count: 10,
-    //     }
-    //   : undefined,
+  // FORK && !!MNEMONIC
+  //   ? {
+  //       mnemonic: MNEMONIC,
+  //       path: MNEMONIC_PATH,
+  //       initialIndex: 0,
+  //       count: 10,
+  //     }
+  //   : undefined,
 };
 
 export const DETERMINISTIC_FACTORIES = {
