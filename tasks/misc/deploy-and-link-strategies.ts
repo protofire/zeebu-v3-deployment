@@ -3,10 +3,6 @@ import { isAddress, parseUnits } from "ethers/lib/utils";
 import { IInterestRateStrategyParams } from "../../helpers/types";
 
 function getReservesConfigModule(market: string) {
-  const allowedMarkets = ["aave", "polygon", "avalanche", "fantom", "arbitrum", "harmony", "optimistic", "base", "test"];
-  if (!allowedMarkets.includes(market)) {
-    throw new Error(`Unknown market: ${market}`);
-  }
   return `../../markets/${market}/reservesConfigs`;
 }
 
@@ -47,7 +43,6 @@ task("deploy-and-link-strategies", "Deploys interest rate strategy and links it 
       console.error(`Invalid configurator: ${configurator}`);
       return;
     }
-    // Import reservesConfigs and get strategy
     const reservesConfigModulePath = getReservesConfigModule("aave");
     const reservesConfigs = await import(reservesConfigModulePath);
     const strategyKey = `strategy${symbol}`;
@@ -60,7 +55,6 @@ task("deploy-and-link-strategies", "Deploys interest rate strategy and links it 
       console.error(`No 'strategy' field found in ${strategyKey}.`);
       return;
     }
-    // Validate required fields for DefaultReserveInterestRateStrategy
     const requiredFields = [
       "optimalUsageRatio",
       "baseVariableBorrowRate",
@@ -80,10 +74,9 @@ task("deploy-and-link-strategies", "Deploys interest rate strategy and links it 
     }
     const [deployer] = await hre.ethers.getSigners();
     const poolConfigurator = await hre.ethers.getContractAt("PoolConfigurator", configurator, deployer);
-    // Deploy strategy with 10 arguments
     const StrategyFactory = await hre.ethers.getContractFactory("DefaultReserveInterestRateStrategy", deployer);
     const deployedStrategy = await StrategyFactory.deploy(
-      provider, // address provider
+      provider,
       strategy.optimalUsageRatio,
       strategy.baseVariableBorrowRate,
       strategy.variableRateSlope1,
@@ -96,11 +89,7 @@ task("deploy-and-link-strategies", "Deploys interest rate strategy and links it 
     );
     await deployedStrategy.deployed();
     console.log(`${symbol}: Deployed strategy at ${deployedStrategy.address}`);
-    // Link to token
     const tx = await poolConfigurator.setReserveInterestRateStrategyAddress(token, deployedStrategy.address);
     await tx.wait();
     console.log(`${symbol}: Linked strategy to token ${token}`);
-    // Print baseVariableBorrowRate using the get-base-variable-borrow-rate task
-    await hre.run("get-base-variable-borrow-rate", { strategy: deployedStrategy.address });
-    console.log("Done.");
   }); 
